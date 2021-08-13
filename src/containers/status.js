@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import { Status } from '../components';
 
@@ -12,7 +12,9 @@ export function StatusContainer() {
       <td>{flight.to}</td>
       <td>
         {flight.flight.map((codeshare) => (
-          <span style={{ display: 'block' }}>{codeshare}</span>
+          <span key={codeshare} style={{ display: 'block' }}>
+            {codeshare}
+          </span>
         ))}
       </td>
       <td>{flight.terminal}</td>
