@@ -1,7 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+
 import { Heading, HeadingSecondary } from './styles/planner';
 
 export default function Planner() {
+  const [input, setInput] = useState({
+    schedule: '',
+    to: '',
+    flight: '',
+    terminal: '',
+    gate: '',
+    status: 0,
+  });
+  const dispatch = useDispatch();
+
+  const _handleInput = (e) =>
+    setInput({ ...input, [e.target.name]: e.target.value });
+
+  const _handleSubmit = (e) => {
+    e.preventDefault();
+    // console.log(Object.values(input)); //convert to array => map check if member is empty
+    // console.log(input); //obj
+
+    setInput({
+      schedule: '',
+      to: '',
+      flight: '',
+      terminal: '',
+      gate: '',
+      status: 0,
+    });
+  };
+
   return (
     <section className="grid-container">
       <Heading>Flight planner</Heading>
@@ -10,43 +40,73 @@ export default function Planner() {
         connected to Singapore.
       </HeadingSecondary>
 
-      <form>
+      <form onSubmit={_handleSubmit}>
         <div className="grid-container">
           <div className="grid-x grid-padding-x">
             <div className="small-12 medium-4 cell">
               <label>
                 Scheduled
-                <input type="text" placeholder="Scheduled" />
+                <input
+                  type="text"
+                  placeholder="Scheduled"
+                  name="schedule"
+                  onChange={_handleInput}
+                  value={input.schedule}
+                />
               </label>
             </div>
             <div className="small-12 medium-4 cell">
               <label>
                 To
-                <input type="text" placeholder="To" />
+                <input
+                  type="text"
+                  placeholder="To"
+                  name="to"
+                  onChange={_handleInput}
+                  value={input.to}
+                />
               </label>
             </div>
             <div className="small-12 medium-4 cell">
               <label>
                 Flight
-                <input type="text" placeholder="Flight" />
+                <input
+                  type="text"
+                  placeholder="Flight"
+                  name="flight"
+                  onChange={_handleInput}
+                  value={input.flight}
+                />
               </label>
             </div>
             <div className="small-12 medium-4 cell">
               <label>
                 Terminal/Row
-                <input type="text" placeholder="e.g. T1, T2, T3, T4/Row" />
+                <input
+                  type="text"
+                  placeholder="e.g. T1, T2, T3, T4/Row"
+                  name="terminal"
+                  onChange={_handleInput}
+                  value={input.terminal}
+                />
               </label>
             </div>
             <div className="small-12 medium-4 cell">
               <label>
                 Gate
-                <input type="text" placeholder="Gate" />
+                <input
+                  type="text"
+                  placeholder="Gate"
+                  name="gate"
+                  onChange={_handleInput}
+                  value={input.gate}
+                />
               </label>
             </div>
             <div className="small-12 medium-4 cell">
               <label>
                 Status
-                <select>
+                <select name="status" onChange={_handleInput} value={status}>
                   <option value="00">00 None</option>
                   <option value="01">01 Departed</option>
                   <option value="02">02 Gate Closed</option>
@@ -57,9 +117,18 @@ export default function Planner() {
             </div>
           </div>
         </div>
-        <button type="submit" className="button expanded">
-          Add flight
-        </button>
+        <div className="grid-x grid-padding-x">
+          <div className="small-12 medium-6 cell">
+            <button type="submit" className="button success expanded">
+              Add flight
+            </button>
+          </div>
+          <div className="small-12 medium-6 cell">
+            <button type="reset" className="button alert expanded">
+              Reset
+            </button>
+          </div>
+        </div>
       </form>
     </section>
   );
