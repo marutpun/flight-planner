@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 import { Status } from '../components';
+import { valueToStatus } from '../utils';
 
 export function StatusContainer() {
   const flights = useSelector((state) => state.flight);
@@ -19,7 +20,7 @@ export function StatusContainer() {
       </td>
       <td>{flight.terminal}</td>
       <td>{flight.gate}</td>
-      <td>{flight.status}</td>
+      <td>{valueToStatus(flight.status)}</td>
     </tr>
   ));
 
