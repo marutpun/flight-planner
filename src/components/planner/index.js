@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { addFlight } from '../../redux/flight';
 
 import { Heading, HeadingSecondary } from './styles/planner';
 
@@ -19,8 +20,8 @@ export default function Planner() {
 
   const _handleSubmit = (e) => {
     e.preventDefault();
-    // console.log(Object.values(input)); //convert to array => map check if member is empty
-    // console.log(input); //obj
+    addFlight;
+    dispatch(addFlight(input));
 
     setInput({
       schedule: '',
@@ -107,11 +108,11 @@ export default function Planner() {
               <label>
                 Status
                 <select name="status" onChange={_handleInput} value={status}>
-                  <option value="00">00 None</option>
-                  <option value="01">01 Departed</option>
-                  <option value="02">02 Gate Closed</option>
-                  <option value="03">03 Gate Closing</option>
-                  <option value="04">04 Gate Open</option>
+                  <option value="0">00 None</option>
+                  <option value="1">01 Departed</option>
+                  <option value="2">02 Gate Closed</option>
+                  <option value="3">03 Gate Closing</option>
+                  <option value="4">04 Gate Open</option>
                 </select>
               </label>
             </div>

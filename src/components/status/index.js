@@ -4,6 +4,14 @@ export default function Status({ children }) {
   return (
     <section className="grid-container">
       <table>
+        <colgroup className="grid-x">
+          <col className="small-2 cell" />
+          <col className="small-2 cell" />
+          <col className="small-2 cell" />
+          <col className="small-2 cell" />
+          <col className="small-2 cell" />
+          <col className="small-2 cell" />
+        </colgroup>
         <thead>
           <tr>
             <th>Schedule</th>
