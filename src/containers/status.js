@@ -1,5 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
 import { Status } from '../components';
 import { valueToStatus } from '../utils';
@@ -21,12 +23,22 @@ export function StatusContainer() {
         ))}
       </td>
       <td>
-        <Status.Info>{flight.terminal}</Status.Info>
+        <Status.InfoTerminal>
+          <FontAwesomeIcon icon={faMapMarkerAlt} />
+          {flight.terminal}
+        </Status.InfoTerminal>
       </td>
       <td>
-        <Status.Info>{flight.gate}</Status.Info>
+        <Status.InfoTerminal>
+          <FontAwesomeIcon icon={faMapMarkerAlt} />
+          {flight.gate}
+        </Status.InfoTerminal>
       </td>
-      <td>{valueToStatus(flight.status)}</td>
+      <td>
+        <Status.InfoStatus status={flight.status}>
+          {valueToStatus(flight.status)}
+        </Status.InfoStatus>
+      </td>
     </Status.TrBackground>
   ));
 

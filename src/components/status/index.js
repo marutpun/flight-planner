@@ -8,6 +8,8 @@ import {
   TrBackground,
   InfoCity,
   Info,
+  InfoTerminal,
+  InfoStatus,
 } from './styles/status';
 
 export default function Status({ children, ...restProps }) {
@@ -44,4 +46,12 @@ Status.InfoCity = function StatusInfoCity({ children, ...restProps }) {
 
 Status.Info = function StatusInfo({ children, ...restProps }) {
   return <Info {...restProps}>{children}</Info>;
+};
+
+Status.InfoTerminal = function StatusInfoTerminal({ children, ...restProps }) {
+  return <InfoTerminal {...restProps}>{children}</InfoTerminal>;
+};
+
+Status.InfoStatus = function StatusInfoStatus({ children, ...restProps }) {
+  return <InfoStatus {...restProps}>{children}</InfoStatus>;
 };

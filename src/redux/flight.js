@@ -29,7 +29,7 @@ const initialState = {
       flight: ['ix687'],
       terminal: 't2/02',
       gate: 'e5',
-      status: 1,
+      status: 2,
     },
     {
       id: generateId(),
@@ -38,7 +38,7 @@ const initialState = {
       flight: ['sq608', 'ac6305', 'oz6782', 'va5408'],
       terminal: 't1/04',
       gate: 'a18',
-      status: 1,
+      status: 3,
     },
     {
       id: generateId(),
@@ -47,7 +47,7 @@ const initialState = {
       flight: ['ca970', 'sq5870'],
       terminal: 't1/04',
       gate: 'd37',
-      status: 1,
+      status: 4,
     },
     {
       id: generateId(),
@@ -56,7 +56,7 @@ const initialState = {
       flight: ['sq336', 'sk8046', 'va5674'],
       terminal: 't3/03',
       gate: 'a4',
-      status: 1,
+      status: 4,
     },
     {
       id: generateId(),
@@ -65,7 +65,7 @@ const initialState = {
       flight: ['5j548'],
       terminal: 't2/08',
       gate: 'f32',
-      status: 1,
+      status: 5,
     },
     {
       id: generateId(),
@@ -74,7 +74,7 @@ const initialState = {
       flight: ['sq362'],
       terminal: 't3/03',
       gate: 'a12',
-      status: 1,
+      status: 5,
     },
   ],
 };

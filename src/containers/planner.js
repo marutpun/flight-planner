@@ -20,7 +20,9 @@ export function PlannerContainer() {
 
   const _handleSubmit = (event) => {
     event.preventDefault();
+
     dispatch(addFlight(input));
+
     setInput({
       schedule: '',
       to: '',
@@ -49,6 +51,7 @@ export function PlannerContainer() {
                 name="schedule"
                 onChange={_handleInput}
                 value={input.schedule}
+                required
               />
             </Planner.Label>
           </div>
@@ -61,6 +64,7 @@ export function PlannerContainer() {
                 name="to"
                 onChange={_handleInput}
                 value={input.to}
+                required
               />
             </Planner.Label>
           </div>
@@ -73,6 +77,7 @@ export function PlannerContainer() {
                 name="flight"
                 onChange={_handleInput}
                 value={input.flight}
+                required
               />
             </Planner.Label>
           </div>
@@ -85,6 +90,7 @@ export function PlannerContainer() {
                 name="terminal"
                 onChange={_handleInput}
                 value={input.terminal}
+                required
               />
             </Planner.Label>
           </div>
@@ -97,6 +103,7 @@ export function PlannerContainer() {
                 name="gate"
                 onChange={_handleInput}
                 value={input.gate}
+                required
               />
             </Planner.Label>
           </div>
@@ -106,13 +113,15 @@ export function PlannerContainer() {
               <select
                 name="status"
                 onChange={_handleInput}
+                required
                 value={input.status}
               >
                 <option value="0">None</option>
                 <option value="1">Departed</option>
                 <option value="2">Gate Closed</option>
-                <option value="3">Gate Closing</option>
-                <option value="4">Gate Open</option>
+                <option value="3">Last Call</option>
+                <option value="4">Gate Closing</option>
+                <option value="5">Gate Open</option>
               </select>
             </Planner.Label>
           </div>
