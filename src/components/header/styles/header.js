@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-export const Header = styled.header`
+export const Container = styled.header`
+  padding: 1rem 0;
   background: hsl(0, 6%, 97%);
 `;
 
@@ -14,7 +15,8 @@ export const Heading = styled.h1`
   }
 `;
 
-export const HeadingSecondary = styled.p`
+export const SubHeading = styled.p`
+  margin: 0;
   font-size: 0.875rem;
   font-family: 'Lato', sans-serif;
   text-align: center;

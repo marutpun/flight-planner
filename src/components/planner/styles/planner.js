@@ -5,7 +5,15 @@ export const Heading = styled.h2`
   font-family: 'Lato', sans-serif;
 `;
 
-export const HeadingSecondary = styled.h2`
+export const HeadingSub = styled.h2`
   font-size: 0.875rem;
+  font-family: 'Lato', sans-serif;
+`;
+
+export const Label = styled.label`
+  font-family: 'Lato', sans-serif;
+`;
+
+export const Button = styled.button`
   font-family: 'Lato', sans-serif;
 `;
