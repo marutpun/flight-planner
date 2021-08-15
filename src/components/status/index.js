@@ -9,6 +9,7 @@ import {
   InfoCity,
   Info,
   InfoTerminal,
+  InfoStatus,
 } from './styles/status';
 
 export default function Status({ children, ...restProps }) {
@@ -49,4 +50,8 @@ Status.Info = function StatusInfo({ children, ...restProps }) {
 
 Status.InfoTerminal = function StatusInfoTerminal({ children, ...restProps }) {
   return <InfoTerminal {...restProps}>{children}</InfoTerminal>;
+};
+
+Status.InfoStatus = function StatusInfoStatus({ children, ...restProps }) {
+  return <InfoStatus {...restProps}>{children}</InfoStatus>;
 };

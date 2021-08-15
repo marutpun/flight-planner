@@ -5,8 +5,10 @@ export function valueToStatus(val) {
     case 2:
       return 'Gate Closed';
     case 3:
-      return 'Gate Closing';
+      return 'Last Call';
     case 4:
+      return 'Gate Closing';
+    case 5:
       return 'Gate Open';
     default:
       return 'None';

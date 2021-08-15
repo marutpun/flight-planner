@@ -34,7 +34,11 @@ export function StatusContainer() {
           {flight.gate}
         </Status.InfoTerminal>
       </td>
-      <td>{valueToStatus(flight.status)}</td>
+      <td>
+        <Status.InfoStatus status={flight.status}>
+          {valueToStatus(flight.status)}
+        </Status.InfoStatus>
+      </td>
     </Status.TrBackground>
   ));
 

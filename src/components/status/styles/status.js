@@ -43,3 +43,18 @@ export const InfoTerminal = styled.span`
   display: block;
   text-transform: uppercase;
 `;
+
+export const InfoStatus = styled.span`
+  //color: hsl(120, 39%, 54%);
+  //color: ${(props) => props.color};
+  color: ${(props) => {
+    if (props.status === 1) {
+      return 'hsl(0,0%,4%)';
+    } else if (props.status === 2 || props.status === 3 || props.status === 4) {
+      return 'hsl(2, 64%, 58%)';
+    } else {
+      return 'hsl(120, 39%, 54%)';
+    }
+  }};
+  display: block;
+`;
