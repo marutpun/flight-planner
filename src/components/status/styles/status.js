@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+export const Table = styled.table`
+  font-family: 'Lato', sans-serif;
+`;
+
 export const Thead = styled.thead`
   background: hsl(0, 0%, 53%);
   font-family: 'Lato', sans-serif;
@@ -45,8 +49,6 @@ export const InfoTerminal = styled.span`
 `;
 
 export const InfoStatus = styled.span`
-  //color: hsl(120, 39%, 54%);
-  //color: ${(props) => props.color};
   color: ${(props) => {
     if (props.status === 1) {
       return 'hsl(0,0%,4%)';

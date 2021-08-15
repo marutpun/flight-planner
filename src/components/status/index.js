@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {
+  Table,
   Thead,
   ThOne,
   ThTwo,
@@ -19,6 +20,10 @@ export default function Status({ children, ...restProps }) {
     </section>
   );
 }
+
+Status.Table = function StatusTable({ children, ...restProps }) {
+  return <Table {...restProps}>{children}</Table>;
+};
 
 Status.Thead = function StatusThead({ children, ...restProps }) {
   return <Thead {...restProps}>{children}</Thead>;

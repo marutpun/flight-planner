@@ -44,7 +44,7 @@ export function StatusContainer() {
 
   return (
     <Status>
-      <table>
+      <Status.Table>
         <colgroup className="grid-x">
           <col className="small-2 cell" />
           <col className="small-2 cell" />
@@ -64,7 +64,7 @@ export function StatusContainer() {
           </tr>
         </Status.Thead>
         <Status.Tbody>{renderFlightsList}</Status.Tbody>
-      </table>
+      </Status.Table>
     </Status>
   );
 }
