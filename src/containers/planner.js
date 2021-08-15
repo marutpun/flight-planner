@@ -35,7 +35,7 @@ export function PlannerContainer() {
 
   return (
     <Planner>
-      <Planner.Heading>Flight planner</Planner.Heading>
+      <Planner.Heading>Flight Planner</Planner.Heading>
       <Planner.HeadingSub>
         Plan your trips in advance. Check out the flight schedules of airlines
         connected to Singapore.

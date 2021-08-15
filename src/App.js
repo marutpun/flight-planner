@@ -7,6 +7,7 @@ import { HeaderContainer } from './containers/header';
 import { PlannerContainer } from './containers/planner';
 import { NavContainer } from './containers/nav';
 import { StatusContainer } from './containers/status';
+import { SearchContainer } from './containers/search';
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       <HeaderContainer />
       <NavContainer />
       <PlannerContainer />
+      <SearchContainer />
       <hr />
       <StatusContainer />
     </Provider>
