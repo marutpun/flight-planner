@@ -37,3 +37,9 @@ export const Info = styled.span`
   display: block;
   text-transform: uppercase;
 `;
+
+export const InfoTerminal = styled.span`
+  color: hsl(210, 51%, 35%);
+  display: block;
+  text-transform: uppercase;
+`;
