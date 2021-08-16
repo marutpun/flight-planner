@@ -10,7 +10,7 @@ export const HeadingSub = styled.p`
   font-family: 'Lato', sans-serif;
 `;
 
-export const SearchInput = styled.input`
+export const InputFlight = styled.input`
   font-size: 0.875rem;
   font-family: 'Lato', sans-serif;
   box-shadow: none;
@@ -21,7 +21,16 @@ export const SearchInput = styled.input`
   }
 `;
 
-export const SearchTerminal = styled.select`
+export const Button = styled.button`
+  background: hsl(0, 0%, 20%);
+
+  &:focus,
+  &:hover {
+    background: hsl(0, 0%, 20%);
+  }
+`;
+
+export const InputTerminal = styled.select`
   font-size: 0.875rem;
   font-family: 'Lato', sans-serif;
   box-shadow: none;

@@ -6,6 +6,8 @@ import { nanoid as generateId } from 'nanoid';
  */
 
 export const ADD_FLIGHT = 'ADD_FLIGHT';
+export const SELECT_TERMINAL = 'SELECT_TERMINAL';
+export const ADD_QUERY = 'ADD_QUERY';
 
 /**
  *
@@ -77,6 +79,8 @@ const initialState = {
       status: 5,
     },
   ],
+  terminalFilter: 't2',
+  query: '',
 };
 
 /**
@@ -85,7 +89,7 @@ const initialState = {
  */
 export default function flightReducer(state = initialState, action) {
   switch (action.type) {
-    case 'ADD_FLIGHT':
+    case ADD_FLIGHT:
       const newFlight = {
         ...action.payload,
         id: generateId(),
@@ -97,7 +101,11 @@ export default function flightReducer(state = initialState, action) {
       return Object.assign({}, state, {
         flight: [...state.flight, newFlight],
       });
+    case SELECT_TERMINAL:
+      return { ...state, terminalFilter: action.payload };
 
+    case ADD_QUERY:
+      return { ...state, query: action.payload };
     default:
       return state;
   }
@@ -112,4 +120,12 @@ export const store = createStore(
  */
 export function addFlight(newFlight) {
   return { type: ADD_FLIGHT, payload: newFlight };
+}
+
+export function selectTerminal(newTerminal) {
+  return { type: SELECT_TERMINAL, payload: newTerminal };
+}
+
+export function addQueryWord(query) {
+  return { type: ADD_QUERY, payload: query };
 }

@@ -3,8 +3,9 @@ import React from 'react';
 import {
   Heading,
   HeadingSub,
-  SearchInput,
-  SearchTerminal,
+  InputFlight,
+  Button,
+  InputTerminal,
 } from './styles/search';
 
 export default function Search({ children }, ...restProps) {
@@ -23,13 +24,17 @@ Search.HeadingSub = function SearchHeadingSub({ children, ...restProps }) {
   return <HeadingSub {...restProps}>{children}</HeadingSub>;
 };
 
-Search.SearchInput = function SearchSearchInput({ ...restProps }) {
-  return <SearchInput {...restProps} />;
+Search.InputFlight = function SearchInputFlight({ ...restProps }) {
+  return <InputFlight {...restProps} />;
 };
 
-Search.SearchTerminal = function SearchSearchTerminal({
+Search.Button = function SearchButton({ children, ...restProps }) {
+  return <Button {...restProps}>{children}</Button>;
+};
+
+Search.InputTerminal = function SearchInputTerminal({
   children,
   ...restProps
 }) {
-  return <SearchTerminal {...restProps}>{children}</SearchTerminal>;
+  return <InputTerminal {...restProps}>{children}</InputTerminal>;
 };
